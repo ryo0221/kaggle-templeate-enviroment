@@ -1,0 +1,73 @@
+{
+    "name": "Kaggle Template Environment",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "kaggle-cpu",
+    "workspaceFolder": "/kaggle/working",
+    "shutdownAction": "stopCompose",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "[python]": {
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.organizeImports.ruff": "explicit",
+                        "source.fixAll.ruff": "explicit"
+                    },
+                    "editor.defaultFormatter": "charliermarsh.ruff"
+                },
+                "autoDocstring.docstringFormat": "google",
+                "python.testing.pytestArgs": [
+                    "tests",
+                    "-vv",
+                    "-s"
+                ],
+                "python.testing.unittestEnabled": false,
+                "python.testing.pytestEnabled": true,
+                "jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true,
+                "jupyter.debugJustMyCode": false,
+                "python.analysis.inlayHints.callArgumentNames": "all",
+                "python.analysis.inlayHints.variableTypes": true,
+                "python.analysis.inlayHints.functionReturnTypes": true,
+                "extensions": [
+                    "ms-python.python",
+                    "ms-python.vscode-pylance",
+                    "charliermarsh.ruff",
+                    "ms-python.mypy-type-checker",
+                    "mhutchie.git-graph",
+                    "Gruntfuggly.todo-tree",
+                    "mechatroner.rainbow-csv",
+                    "janisdd.vscode-edit-csv",
+                    "njpwerner.autodocstring",
+                    "ms-toolsai.jupyter",
+                    "ms-toolsai.jupyter-keymap"
+                ],
+                "launch": {
+                    "version": "0.2.0",
+                    "configurations": [
+                        {
+                            "name": "Python: Current File",
+                            "type": "debugpy",
+                            "request": "launch",
+                            "program": "${file}",
+                            "console": "internalConsole",
+                            "justMyCode": false
+                        },
+                        {
+                            "name": "Python: Debug Test",
+                            "type": "debugpy",
+                            "request": "launch",
+                            "purpose": [
+                                "debug-test"
+                            ],
+                            "console": "internalConsole",
+                            "justMyCode": false
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

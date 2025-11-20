@@ -1,0 +1,20 @@
+{
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/devcontainer/devcontainer.json",
+                "/devcontainer.json"
+            ],
+            "url": "./.vscode/schemas/devContainer.schema.json"
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  kaggle-cpu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kaggle-cpu
+    volumes:
+      # Kaggle credential
+      - ~/.kaggle:/root/.kaggle:ro
+      # Working directory (your project)
+      - ./:/kaggle/working
+      # Optional: datasets
+      - ./input:/kaggle/input
+    working_dir: /kaggle/working
+    stdin_open: true
+    tty: true
+
+  kaggle-gpu:
+    build:
+      context: .
+      dockerfile: Dockerfile.gpu
+    container_name: kaggle-gpu
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    volumes:
+      - ~/.kaggle:/root/.kaggle:ro
+      - ./:/kaggle/working
+      - ./input:/kaggle/input
+    working_dir: /kaggle/working
+    stdin_open: true
+    tty: true

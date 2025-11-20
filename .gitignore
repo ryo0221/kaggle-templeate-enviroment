@@ -1,0 +1,8 @@
+input/
+.venv/
+.mypy_cache/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store 
+.python-version

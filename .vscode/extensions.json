@@ -1,0 +1,17 @@
+{
+    // List of extensions to recommend for this workspace
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "usernamehw.errorlens",
+        "charliermarsh.ruff",
+        "ms-python.mypy-type-checker",
+        "mhutchie.git-graph",
+        "Gruntfuggly.todo-tree",
+        "mechatroner.rainbow-csv",
+        "janisdd.vscode-edit-csv",
+        "njpwerner.autodocstring",
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-keymap"
+    ]
+}

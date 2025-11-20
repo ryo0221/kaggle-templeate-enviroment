@@ -1,0 +1,23 @@
+{ // This file is used to configure the debugging settings for VS Code.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "internalConsole",
+            "justMyCode": false
+        },
+        {
+            "name": "Python: Debug Test",
+            "type": "debugpy",
+            "request": "launch",
+            "purpose": [
+                "debug-test"
+            ],
+            "console": "internalConsole",
+            "justMyCode": false
+        }
+    ]
+}
